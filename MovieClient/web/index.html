@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Movie Top Page</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="cover.css" rel="stylesheet">
+        <link rel="stylesheet" href="normalize.css">
+
+        <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+
+    </head>
+
+    <body> 
+
+        <div class="site-wrapper">
+            <div class="site-wrapper-inner">
+
+                <div class="cover-container">
+
+                    <div class="masthead clearfix">
+                        <h3 class="masthead-brand" style="float:left">A.I. Search</h3> 
+                        <div class="inner">        
+                            <nav class="center-block">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                                    <li role="presentation"><a href="#google" aria-controls="google" role="tab" data-toggle="tab">Google</a></li>
+                                    <li role="presentation"><a href="#baidu" aria-controls="baidu" role="tab" data-toggle="tab">Baidu</a></li>
+                                    <li role="presentation"><a href="#tudou" aria-controls="tudou" role="tab" data-toggle="tab">Tudou</a></li>
+                                     <li role="presentation"><a href="#sentiment" aria-controls="sentiment" role="tab" data-toggle="tab">Sentiment</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <form action="http://localhost:8080/MovieClient/SearchServlet" method="POST">    
+                                <input type="search" placeholder="What are you looking for?" name="keywords">
+                                <button>Search</button>
+                            </form>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="google"> 
+                            <form action="http://localhost:8080/MovieClient/GoogleServlet" method="POST">    
+                                <input type="search" placeholder="What are you looking for?" name="keywords">
+                                <button>Search</button>
+                            </form>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="baidu">
+                            <form action="http://localhost:8080/MovieClient/BaiduServlet" method="POST">    
+                                <input type="search" placeholder="What are you looking for?" name="keywords">
+                                <button>Search</button>
+                            </form>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="tudou">
+                            <form action="http://localhost:8080/MovieClient/TudouServlet" method="POST">    
+                                <input type="search" placeholder="What are you looking for?" name="keywords">
+                                <button>Search</button>
+                            </form>
+                        </div> 
+                        <div role="tabpanel" class="tab-pane" id="sentiment">
+                            <form action="http://localhost:8080/MovieClient/ChartServlet" method="POST">    
+                                <input type="search" placeholder="What are you looking for?" name="keywords">
+                                <button>Search</button>
+                            </form>
+                        </div>   
+                    </div>
+
+                    <div class="mastfoot">
+                        <div class="inner">                        
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="9"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <a href="http://localhost:8080/MovieClient/SearchIDServlet?keywords=2">
+                                            <img src="img/Batman.jpg" width="200" height="100" class="img-responsive"/>
+                                        </a>
+                                        <div class="carousel-caption">
+                                            <h4> Batman Begins</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://localhost:8080/MovieClient/SearchIDServlet?keywords=3">
+                                            <img src="img/Knight.jpg" width="200" height="100" class="img-responsive" />
+                                        </a>
+                                        <div class="carousel-caption">
+                                            <h4> The Dark knight Rises </h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://localhost:8080/MovieClient/SearchIDServlet?keywords=1">
+                                            <img src="img/Godfather.jpg" width="200" height="100" class="img-responsive" />
+                                        </a>
+                                        <div class="carousel-caption">
+                                            <h4> The Godfather </h4> 
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://localhost:8080/MovieClient/SearchIDServlet?keywords=7">
+                                            <img src="img/Begin.jpg" width="200" height="100" class="img-responsive" />
+                                        </a>
+                                        <div class="carousel-caption">
+                                            <h4> Begin Again </h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://localhost:8080/MovieClient/SearchIDServlet?keywords=5">
+                                            <img src="img/Inside.jpg" width="200" height="100" class="img-responsive" />
+                                        </a>
+                                        <div class="carousel-caption">
+                                            <h4> Inside Llewyn Davis </h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://localhost:8080/MovieClient/SearchIDServlet?keywords=6">
+                                            <img src="img/Once.jpg" width="200" height="100" class="img-responsive" />
+                                        </a>
+                                        <div class="carousel-caption">
+                                            <h4> Once </h4>
+                                        </div>
+                                    </div>                       
+                                    <div class="item">
+                                        <a href="http://localhost:8080/MovieClient/SearchIDServlet?keywords=10">
+                                            <img src="img/Broke.jpg" width="200" height="100" class="img-responsive" />
+                                        </a>
+                                        <div class="carousel-caption">
+                                            <h4>Brokeback Mountain</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://localhost:8080/MovieClient/SearchIDServlet?keywords=4">
+                                            <img src="img/Coherence.jpg" width="200" height="100" class="img-responsive" />
+                                        </a>
+                                        <div class="carousel-caption">
+                                            <h4> Coherence </h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://localhost:8080/MovieClient/SearchIDServlet?keywords=9">
+                                            <img src="img/America.jpg" width="200" height="100" class="img-responsive" />
+                                        </a>
+                                        <div class="carousel-caption">
+                                            <h4> Once Upon a Time in America </h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://localhost:8080/MovieClient/SearchIDServlet?keywords=8">
+                                            <img src="img/WHIPLASH.jpg" width="200" height="100" class="img-responsive" />
+                                        </a>
+                                        <div class="carousel-caption">
+                                            <h4> Whiplash</h4>
+                                        </div>
+                                    </div>        
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+    </body>
+</html>
